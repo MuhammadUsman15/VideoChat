@@ -1,7 +1,7 @@
 const APP_ID = 'You app id'
-const CHANNEL = 'mychat'
-const TOKEN = 'Your Token'
-let UID =173;
+const CHANNEL = sessionStorage.getItem('room')
+const TOKEN = sessionStorage.getItem('token') 
+let UID =Number(sessionStorage.getItem('UID'))
 const client = AgoraRTC.createClient({mode:'rtc', codec:'vp8'})
 
 let localTracks = []

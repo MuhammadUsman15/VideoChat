@@ -6,7 +6,7 @@ import time
 # Create your views here.
 
 def getToken(request):
-    appId = 'You app id'
+    appId = 'Your APP ID'
     appCertificate = 'Your Certificate'
     channelName = request.GET.get('channel')  # Use request.GET instead of request.Get
     uid=random.randint(1,230)
