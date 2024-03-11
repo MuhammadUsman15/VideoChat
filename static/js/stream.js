@@ -8,10 +8,18 @@ let localTracks = []
 let remoteUsers = {}
 
 let joinAndDisplayLocalStream = async () => {
+    document.getElementById('room-name').innerText = CHANNEL
+
     client.on('user-published', handleUserJoined)
     client.on('user-published', handleUserLeft)
 
-    await client.join(APP_ID, CHANNEL, TOKEN, UID)
+    try{
+        await client.join(APP_ID, CHANNEL, TOKEN, UID)
+    }catch(error){
+        console.error(error)
+        window.open('/', '_self')
+    }
+
 
     localTracks = await AgoraRTC.createMicrophoneAndCameraTracks()
 

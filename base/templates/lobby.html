@@ -5,7 +5,7 @@
 
 <section id="form-container">
     <img id="logo" src="{%static 'images/chat-icon.png'%}" alt="">
-    <div>
+    <div id="welcome-message">
         <h1>
             Welcome To MyChat
         </h1>
@@ -15,6 +15,9 @@
     <form id="form">
         <div class="form-field">
             <input type="text" name="room" placeholder="Enter a Room name.." style="text-transform: uppercase;">
+        </div>
+        <div class="form-field">
+            <input type="text" name="username" placeholder="Enter a your name.." style="text-transform: uppercase;">
         </div>
 
         <div class="form-field">
