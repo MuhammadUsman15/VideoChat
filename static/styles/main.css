@@ -41,6 +41,31 @@ body{
     transform: translate(-50%, -50%);
 }
 
+.form-field{
+    margin-bottom: 20px;
+}
+
+.form-field label{
+    font-size: 16px;
+    line-height: 1.7em;
+}
+
+.form-field input{
+    width: 100%;
+    border:2px solid rgba(198,202,219,1);
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.form-field input[type='submit']{
+    background-color: rgb(75, 93, 172);
+    border:none;
+    color: #fff;
+}
+
+
 /* Room Styling */
 
 #video-streams{
